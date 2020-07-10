@@ -5,8 +5,16 @@
     // Configure glob patterns for excluding files and folders.
     "files.exclude": {
         "**/.build": true,
+        "**/*.bin": true,
         "**/*.hex": true,
-        "**/*.bin": true
+        "keyboards/{[0-9],[a-j],[l-z],_}*": true,
+        "keyboards/?{[0-9],[a-x],z,_}*": true,
+        "users": true,
+        "layouts": true,
+        "tests": true,
+        "tmk_core": true,
+        "drivers": true,
+        "docs": true
     },
     "files.associations": {
         "*.h": "c",
