@@ -322,6 +322,10 @@ void oled_render(void) {
 void oled_set_cursor(uint8_t col, uint8_t line) {
     uint16_t index = line * oled_rotation_width + col * OLED_FONT_WIDTH;
 
+    oled_set_cursor_to_index(index);
+}
+
+void oled_set_cursor_to_index(uint16_t index) {
     // Out of bounds?
     if (index >= OLED_MATRIX_SIZE) {
         index = 0;
@@ -482,6 +486,18 @@ void oled_write_raw_P(const char *data, uint16_t size) {
         uint8_t c = pgm_read_byte(data++);
         if (oled_buffer[i] == c) continue;
         oled_buffer[i] = c;
+        oled_dirty |= (1 << (i / OLED_BLOCK_SIZE));
+    }
+}
+
+void oled_write_raw_range_P(const char *data, uint16_t begin, uint16_t end) {
+    if (begin >= OLED_MATRIX_SIZE) begin = 0;
+    if (end - begin > OLED_MATRIX_SIZE) end = OLED_MATRIX_SIZE;
+    oled_set_cursor_to_index(begin);
+    for (uint16_t i = begin; i < end; i++) {
+        uint8_t c = pgm_read_byte(data++);
+        if (*oled_cursor == c) continue;
+        *(oled_cursor++) = c;
         oled_dirty |= (1 << (i / OLED_BLOCK_SIZE));
     }
 }

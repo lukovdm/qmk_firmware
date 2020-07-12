@@ -4,8 +4,8 @@ RGBLIGHT_ENABLE = yes      # Enable keyboard RGB underglow
 BOOTLOADER = caterina
 WPM_ENABLE = yes
 LEADER_ENABLE = yes
+MOUSEKEY_ENABLE = yes
 
-MOUSEKEY_ENABLE = no
 TAP_DANCE_ENABLE = no
 STENO_ENABLE = no
 BOOTMAGIC_ENABLE = no

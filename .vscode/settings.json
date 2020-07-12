@@ -13,7 +13,6 @@
         "layouts": true,
         "tests": true,
         "tmk_core": true,
-        "drivers": true,
         "docs": true
     },
     "files.associations": {
