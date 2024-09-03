@@ -16,4 +16,5 @@
 #pragma once
 
 #define EE_HANDS
+// #define MASTER_RIGHT
 #define SELECT_SOFT_SERIAL_SPEED 1
