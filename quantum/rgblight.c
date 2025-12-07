@@ -491,7 +491,7 @@ void rgblight_sethsv_eeprom_helper(uint8_t hue, uint8_t sat, uint8_t val, bool w
         rgblight_config.val = val;
         if (write_to_eeprom) {
             eeconfig_update_rgblight(rgblight_config.raw);
-            dprintf("rgblight set hsv [EEPROM]: %u,%u,%u\n", rgblight_config.hue, rgblight_config.sat, rgblight_config.val);
+            dprintf("rgblight set hsv [EEPROM]: %u,%u,%u in mode %u\n", rgblight_config.hue, rgblight_config.sat, rgblight_config.val, rgblight_status.base_mode);
         } else {
             dprintf("rgblight set hsv [NOEEPROM]: %u,%u,%u\n", rgblight_config.hue, rgblight_config.sat, rgblight_config.val);
         }
