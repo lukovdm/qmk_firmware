@@ -89,20 +89,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * Navigation Layer
      *
      * ,-------------------------------------------.                              ,-------------------------------------------.
-     * |      | PgUp | Home | End  | PgDn | ScrlLk |                              |      | PgUp | Home | End  | PgDn | ScrlLk |
+     * |      |      |      |      |      |        |                              |      | PgUp | Home | End  | PgDn | ScrlLk |
      * |------+------+------+------+------+--------|                              |------+------+------+------+------+--------|
-     * |   m3 | Left | Down | Up   | Right| CapsLk |                              |   m3 | Left | Down | Up   | Right| CapsLk |
+     * |      |      |      |      |      |        |                              |   m3 | Left | Down | Up   | Right| CapsLk |
      * |------+------+------+------+------+--------|                              |------+------+------+------+------+--------|
-     * |   m1 |mLeft |mDown |  mUp |mRight|        |                              |   m1 |mLeft |mDown |  mUp |mRight|        |
+     * |      |      |      |      |      |        |                              |   m1 |mLeft |mDown |  mUp |mRight|        |
      * `------------------------------------+------+-------------.  ,-------------+------+------------------------------------'
      *                                      |      |      |      |  |      |      |      |
      *                                      |      |      |      |  |      |      |      |
      *                                      ---------------------'  `--------------------'
      */
     [_NAV] = LAYOUT_split_3x6_3(
-        _______, KC_PGUP, KC_HOME, KC_END, KC_PGDN, _______,           KC_SCRL, KC_PGDN, KC_END, KC_HOME, KC_PGUP, _______,
-        KC_BTN3, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_CAPS,            KC_CAPS, KC_RGHT, KC_UP, KC_DOWN, KC_LEFT, KC_BTN3, 
-        KC_BTN1, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______,          _______, KC_MS_R, KC_MS_U, KC_MS_D, KC_MS_L, KC_BTN1, 
+        _______, _______, _______, _______, _______, _______,           KC_SCRL, KC_PGDN, KC_END, KC_HOME, KC_PGUP, _______,
+        _______, _______, _______, _______, _______, _______,            KC_CAPS, KC_RGHT, KC_UP, KC_DOWN, KC_LEFT, KC_BTN3, 
+        _______, _______, _______, _______, _______, _______,          _______, KC_MS_R, KC_MS_U, KC_MS_D, KC_MS_L, KC_BTN1, 
                                    _______, _______, _______,           _______, _______, _______),
     // /*
     //  * Layer template
